@@ -37,9 +37,9 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'south',
     'autofixture',
     'django_extensions',
+    'biography',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -56,17 +56,18 @@ ROOT_URLCONF = 'willisiteback.urls'
 
 WSGI_APPLICATION = 'willisiteback.wsgi.application'
 
-SOUTH_TESTS_MIGRATE = False
-SKIP_SOUTH_TESTS = True
-
 
 # Database
 # https://docs.djangoproject.com/en/1.7/ref/settings/#databases
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE':'django.db.backends.postgresql_psycopg2',
+        'NAME': 'willisite',
+        'USER': 'postgres',
+        'PASSWORD': '1234',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
