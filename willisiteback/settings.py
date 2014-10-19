@@ -40,6 +40,13 @@ INSTALLED_APPS = (
     'autofixture',
     'django_extensions',
     'biography',
+    'skills',
+    'categories',
+    'portfolios',
+    'tags',
+    'labs',
+    'tutorials',
+    'comments',
 )
 
 MIDDLEWARE_CLASSES = (
