@@ -27,6 +27,10 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
+REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': ('rest_framework.filters.DjangoFilterBackend',)
+}
+
 
 # Application definition
 
@@ -39,6 +43,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'autofixture',
     'django_extensions',
+    'rest_framework',
     'biography',
     'skills',
     'categories',
